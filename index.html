@@ -128,3 +128,305 @@ isn't a strategy
 </body>
 
 </html>
+
+:root {
+
+    --paper: #f6f1e7;
+    --paper-screen: #fbf8f2;
+
+    --ink: #2e2a25;
+    --line: #5d554b;
+
+    --gold: #c7a24d;
+
+    --shadow: rgba(0,0,0,.08);
+
+    --screen-width: 72vw;
+    --camera-scale: .90;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    overflow:hidden;
+
+    background:var(--paper);
+
+    font-family:"Cormorant Garamond", serif;
+
+    color:var(--ink);
+
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.28;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(255,255,255,.6),
+    transparent 40%),
+
+    radial-gradient(circle at 80% 70%,
+    rgba(255,255,255,.4),
+    transparent 50%),
+
+    repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,.008) 4px
+    );
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    box-shadow:
+    inset 0 0 180px rgba(0,0,0,.08);
+
+}
+
+#film{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.scene{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#camera{
+
+    width:var(--screen-width);
+
+    max-width:1400px;
+
+    transform:scale(var(--camera-scale));
+
+    transition:transform 10s ease-out;
+
+}
+
+svg{
+
+    width:100%;
+    height:auto;
+
+    overflow:visible;
+
+}
+
+.paper{
+
+    fill:transparent;
+
+}
+
+.screen-frame{
+
+    fill:none;
+
+    stroke:var(--line);
+
+    stroke-width:3;
+
+}
+
+.paper-screen{
+
+    fill:var(--paper-screen);
+
+}
+
+.laptop-base{
+
+    fill:none;
+
+    stroke:var(--line);
+
+    stroke-width:3;
+
+}
+
+.trackpad{
+
+    fill:none;
+
+    stroke:var(--line);
+
+    stroke-width:2;
+
+}
+
+.quote{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    color:var(--ink);
+
+}
+
+.line{
+
+    font-size:3rem;
+
+    line-height:1.1;
+
+}
+
+.line.one{
+
+    margin-left:10px;
+
+}
+
+.line.two{
+
+    transform:rotate(-1deg);
+
+}
+
+.line.three{
+
+    margin-left:120px;
+
+}
+
+.script{
+
+    font-family:"Great Vibes", cursive;
+
+    font-size:4.3rem;
+
+    color:#40372d;
+
+}
+
+#origin-container{
+
+    display:inline-flex;
+
+    align-items:center;
+
+}
+
+#origin{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--ink);
+
+    margin-left:6px;
+
+    display:inline-block;
+
+    transform-origin:center;
+
+    animation:breathe 4s ease-in-out infinite;
+
+}
+
+body{
+
+    animation:
+
+        fadeIn 2s ease;
+
+}
+
+@keyframes breathe{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.18);
+
+        opacity:.82;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
