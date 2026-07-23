@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Chaos Meets Clarity</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Caveat:wght@700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--cream:#FBF6EF;
+--green:#204637;
+--rose:#CF7F87;
+--gold:#D9A04A;
+--sage:#B8BA9A;
+--wine:#7B4A53;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Manrope,sans-serif;
+background:
+radial-gradient(circle at 0% 100%,#efc175 0 12%,transparent 13%),
+radial-gradient(circle at 100% 100%,#efc8cb 0 13%,transparent 14%),
+linear-gradient(var(--cream),#f8f3ec);
+color:var(--green);
+overflow-x:hidden;
+}
+body:before{
+content:"";
+position:fixed;left:-90px;top:-60px;width:320px;height:230px;
+background:#e8a4a8;border-radius:45% 55% 55% 35%;opacity:.75;z-index:-1;
+}
+.marquee{padding:16px 0;border-top:1px solid #d9c5ba;border-bottom:1px solid #d9c5ba;overflow:hidden}
+.track{display:flex;width:max-content;animation:marquee 30s linear infinite}
+.track span{padding-right:70px;letter-spacing:.35em;text-transform:uppercase;color:#7d5b57;font-size:.9rem}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.hero{max-width:1400px;margin:auto;padding:60px 40px 20px;text-align:center}
+h1{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(4rem,6vw,6.6rem);
+font-weight:600;
+line-height:1;
+white-space:nowrap;
+}
+.script{
+display:block;
+font-family:Caveat,cursive;
+font-size:clamp(5rem,8vw,8rem);
+color:var(--rose);
+margin-top:-8px;
+position:relative;
+}
+.script:after{
+content:"";
+display:block;
+margin:0 auto;
+width:320px;max-width:40%;
+height:4px;border-radius:10px;
+background:var(--gold);
+margin-top:-10px;
+animation:draw 1.4s ease;
+transform-origin:left;
+}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.desc{
+max-width:900px;
+margin:30px auto 60px;
+font-size:1.35rem;
+line-height:1.7;
+color:#314840;
+}
+.workflow{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:22px;
+margin:30px auto 20px;
+flex-wrap:nowrap;
+}
+.card{
+width:150px;height:150px;
+background:#fff;
+border-radius:28px;
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+animation:float 6s ease-in-out infinite;
+}
+.card:nth-child(3){background:#efc67c}
+.card:nth-child(5){background:#f5d8d9}
+.card:nth-child(7){background:#dfe2cc}
+.card:nth-child(9){background:#dcb8c5}
+.connector{
+width:70px;height:3px;background:#5d7769;position:relative;
+}
+.connector:before{
+content:"";
+position:absolute;
+left:50%;top:50%;
+transform:translate(-50%,-50%);
+width:16px;height:16px;border-radius:50%;
+background:#d89995;
+}
+svg{width:82px;height:82px}
+.gear svg{animation:spin 12s linear infinite;transform-origin:center center}
+.check svg{animation:pulse 2.5s infinite}
+.spark{
+position:absolute;
+right:-12px;top:-10px;
+color:var(--rose);
+font-size:26px;
+animation:twinkle 3s infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes twinkle{50%{opacity:.3;transform:scale(.8)}}
+.cornerdoc{
+position:absolute;right:70px;top:130px;
+opacity:.9
+}
+.cornerdoc svg{width:70px;height:70px}
+.star1,.star2{
+position:absolute;color:var(--gold);font-size:44px
+}
+.star1{left:180px;top:420px}
+.star2{right:170px;top:360px}
+@media(max-width:1100px){
+h1{white-space:normal}
+.workflow{flex-wrap:wrap}
+.connector{display:none}
+.card{width:120px;height:120px}
+}
+</style>
+</head>
+<body>
+
+<div class="marquee">
+<div class="track">
+<span>✦ WHERE CHAOS MEETS CLARITY ✦</span><span>✦ WHERE CHAOS MEETS CLARITY ✦</span><span>✦ WHERE CHAOS MEETS CLARITY ✦</span><span>✦ WHERE CHAOS MEETS CLARITY ✦</span>
+</div>
+</div>
+
+<div class="cornerdoc">
+<svg viewBox="0 0 64 64" fill="none" stroke="#7b4a53" stroke-width="2">
+<path d="M16 6h22l10 10v42H16z"/><path d="M38 6v10h10"/>
+<line x1="22" y1="28" x2="42" y2="28"/><line x1="22" y1="36" x2="42" y2="36"/><line x1="22" y1="44" x2="38" y2="44"/>
+</svg>
+</div>
+
+<div class="star1">✦</div>
+<div class="star2">✦</div>
+
+<section class="hero">
+<h1>
+Making operational complexity
+<span class="script">beautifully simple</span>
+</h1>
+
+<p class="desc">
+I transform messy workflows into elegant systems through process design,
+automation, documentation, and thoughtful user experiences that people actually enjoy working in.
+</p>
+
+<div class="workflow">
+
+<div class="card">
+<svg viewBox="0 0 64 64" fill="none" stroke="#264839" stroke-width="2">
+<circle cx="32" cy="20" r="8"/><path d="M18 48c3-9 25-9 28 0"/>
+</svg>
+</div>
+
+<div class="connector"></div>
+
+<div class="card">
+<svg viewBox="0 0 64 64" fill="none" stroke="#7b4a53" stroke-width="2">
+<path d="M18 8h20l8 8v40H18z"/><path d="M38 8v8h8"/>
+<line x1="24" y1="26" x2="40" y2="26"/><line x1="24" y1="34" x2="40" y2="34"/><line x1="24" y1="42" x2="40" y2="42"/>
+</svg>
+</div>
+
+<div class="connector"></div>
+
+<div class="card gear">
+<span class="spark">✦</span>
+<svg viewBox="0 0 64 64" fill="none" stroke="#264839" stroke-width="2.5">
+<circle cx="32" cy="32" r="12"/><circle cx="32" cy="32" r="18"/>
+</svg>
+</div>
+
+<div class="connector"></div>
+
+<div class="card">
+<svg viewBox="0 0 64 64" fill="none" stroke="#7b4a53" stroke-width="2">
+<circle cx="32" cy="12" r="5"/><circle cx="16" cy="48" r="5"/><circle cx="48" cy="48" r="5"/>
+<path d="M32 17v12M32 29L16 43M32 29l16 14"/>
+</svg>
+</div>
+
+<div class="connector"></div>
+
+<div class="card check">
+<span class="spark">✦</span>
+<svg viewBox="0 0 64 64" fill="none" stroke="#264839" stroke-width="3">
+<circle cx="32" cy="32" r="22"/><path d="M22 33l8 8 14-16"/>
+</svg>
+</div>
+
+<div class="connector"></div>
+
+<div class="card">
+<span class="spark">✦</span>
+<svg viewBox="0 0 64 64">
+<rect x="10" y="12" width="44" height="40" rx="3" fill="none" stroke="#7b4a53" stroke-width="2"/>
+<rect x="18" y="34" width="6" height="10" fill="#D9A04A"/>
+<rect x="28" y="26" width="6" height="18" fill="#CF7F87"/>
+<rect x="38" y="18" width="6" height="26" fill="#204637"/>
+</svg>
+</div>
+
+</div>
+</section>
+
+</body>
+</html>
